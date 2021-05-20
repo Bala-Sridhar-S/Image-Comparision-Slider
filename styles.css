@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background-color: #fefefe;
+}
+
+img{
+    width: 30vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.container{
+    position: relative;
+    width: 30vw;
+    height: 80vh;
+}
+
+.img-container-after,
+.img-container-before{
+    position: absolute;
+}
+
+.img-container-before{
+    width: 15vw;
+    overflow: hidden;
+}
+
+.slider{
+    position: absolute;
+    width: 0.2rem;
+    height: 100%;
+    z-index: 10;
+    background-color: white;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    font-weight: 400;
+}
+
+/* Media Queries */
+/* Screen width less than 600px */
+@media screen and (max-width: 1024px) {
+    img{
+        width: 50vw;
+    }
+    
+    .container{
+        width: 50vw;
+    }
+    
+    .img-container-before{
+        width: 25vw;
+    }
+}
+
+/* Screen width less than 768px */
+@media screen and (max-width: 768px) {
+    img{
+        width: 70vw;
+    }
+    
+    .container{
+        width: 70vw;
+    }
+    
+    .img-container-before{
+        width: 35vw;
+    }
+}
+
+/* Screen width less than 480px */
+@media screen and (max-width: 480px) {
+    img{
+        width: 80vw;
+    }
+    
+    .container{
+        width: 80vw;
+    }
+    
+    .img-container-before{
+        width: 40vw;
+    }
+}
+
+/* Screen width less than 300px */
+@media screen and (max-width: 300px) {
+    img{
+        width: 90vw;
+    }
+    
+    .container{
+        width: 90vw;
+    }
+    
+    .img-container-before{
+        width: 45vw;
+    }
+}
